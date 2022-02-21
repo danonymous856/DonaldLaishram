@@ -20,6 +20,21 @@ h6 {
         font-size: 40px !important;
     }
 }
+.display-45{
+    color: black;
+    opacity: 0.8;
+    font-size: xxx-large;
+}
+.display-44{
+    color: black;
+    opacity: 0.8;
+    font-size: xxx-large;
+}
+.empowering{
+    font-size: x-large;
+    color: #111111;
+    opacity: inherit;
+}
 html {
     scroll-behavior: smooth;
 }
@@ -72,7 +87,7 @@ p {
 }
 .link:hover{
     text-decoration: none;
-    color: #111;
+    color: black;
     transition: all 0.3s;
 }
 .social-links li {
@@ -89,6 +104,7 @@ p {
     position: relative;
 }
 .social-links li a ion-icon {
+    color: #111111;
     position: absolute;
     font-size: 26px;
     top: 50%;
@@ -129,6 +145,12 @@ p {
     font-weight: 700 !important;
     color: rgba(0, 0, 0, 0.08);
     text-transform: uppercase;
+}
+.little{
+    color: black;
+    background-color: azure ;
+    opacity: 0.7;
+    border-radius: 5px;
 }
 @media (min-width: 992px) {
     .wrap .about-desc .bold-text {
