@@ -90,6 +90,21 @@ p {
     color: black;
     transition: all 0.3s;
 }
+.all{
+    color: black;
+    opacity: 0.8;
+    font-size: xxx-large;
+}
+.sub-all{
+    color: black;
+    opacity: 0.8;
+    font-size: x-large;
+}
+.x-sub-all{
+    color: black;
+    opacity: 0.8;
+    font-size: large;
+}
 .social-links li {
     list-style: none;
     display: inline-block;
