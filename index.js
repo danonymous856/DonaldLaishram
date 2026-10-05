@@ -1,24 +1,37 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-componenets';
+const emailButton = document.querySelector("[data-copy-email]");
+const yearButtons = document.querySelectorAll("[data-year]");
+const journeyEntries = document.querySelectorAll("[data-journey-year]");
 
-const Index = props => {
-    return (
-        <div>
-            <Index>
-                <div>
-                    <p>WE will We will rock you
-                    Bloody you sre a hard guy fart guy driving sdince the Day all night yuo got Blood On yuor face a Big Disgrace drinking the Potion and Spitting All oveer the Face </p>
-                </div>
-            </Index>
-            <p>made in India !! </p>
+function copyEmail() {
+    const email = "donaldlaishram2k2@gmail.com";
+    navigator.clipboard.writeText(email).then(() => {
+        if (!emailButton) return;
+        const original = emailButton.textContent;
+        emailButton.textContent = "Copied!";
+        window.setTimeout(() => {
+            emailButton.textContent = original;
+        }, 1800);
+    });
+}
 
-        </div>
-    );
-};
+function setActiveYear(year) {
+    yearButtons.forEach((button) => {
+        button.classList.toggle("is-active", button.dataset.year === year);
+    });
 
-Index.propTypes = {
+    journeyEntries.forEach((entry) => {
+        entry.classList.toggle("is-active", entry.dataset.journeyYear === year);
+    });
+}
 
-};
+if (emailButton) {
+    emailButton.addEventListener("click", copyEmail);
+}
 
-export default Index;
+yearButtons.forEach((button) => {
+    button.addEventListener("click", () => setActiveYear(button.dataset.year));
+});
+
+if (yearButtons.length) {
+    setActiveYear(yearButtons[0].dataset.year);
+}
